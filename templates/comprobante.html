@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Comprobante de Pago</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background-color: #f8f9fa;
+      color: #333;
+    }
+    h2 {
+      color: #2c3e50;
+      border-bottom: 2px solid #2c3e50;
+      padding-bottom: 8px;
+      margin-bottom: 20px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: #fff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    th, td {
+      padding: 12px 15px;
+      border: 1px solid #ddd;
+      text-align: left;
+      font-size: 16px;
+    }
+    th {
+      background-color: #2c3e50;
+      color: white;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+    .total-row td {
+      font-weight: bold;
+      font-size: 18px;
+      color: #2c3e50;
+    }
+  </style>
+</head>
+<body>
+  <h2>Comprobante de Pago</h2>
+  <table>
+    <tbody>
+      <tr>
+        <th>Campo</th>
+        <th>Detalle</th>
+      </tr>
+      <tr>
+        <td>Nombre</td>
+        <td>{{ nombre }}</td>
+      </tr>
+      <tr>
+        <td>Salario base</td>
+        <td>B/. {{ salario }}</td>
+      </tr>
+      <tr>
+        <td>Propina</td>
+        <td>B/. {{ propina }}</td>
+      </tr>
+      <tr>
+        <td>Días trabajados</td>
+        <td>{{ dias }}</td>
+      </tr>
+      <tr class="total-row">
+        <td>Total a pagar</td>
+        <td>B/. {{ total }}</td>
+      </tr>
+      <tr>
+        <td>Fecha de pago</td>
+        <td>{{ fecha }}</td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>

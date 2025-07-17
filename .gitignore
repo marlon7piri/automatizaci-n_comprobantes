@@ -1,0 +1,38 @@
+# Entorno virtual
+venv/
+.venv/
+env/
+ENV/
+
+# Variables de entorno
+.env
+
+# Bytecode de Python
+__pycache__/
+*.py[cod]
+
+# Archivos de log
+*.log
+
+# Archivos generados
+*.sqlite3
+*.db
+*.pyc
+
+# Carpeta de paquetes instalados
+pip-wheel-metadata/
+*.egg-info/
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+
+# Carpetas y archivos específicos de editores o IDEs
+.vscode/
+.idea/
+
+# Archivos PDF o resultados generados (opcional, si no quieres subir PDFs generados)
+comprobantes/
+
+# Configuraciones locales (opcional)
+local_settings.py
