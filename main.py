@@ -1,5 +1,6 @@
 from fastapi import FastAPI, UploadFile, File, BackgroundTasks
 from fastapi.responses import JSONResponse
+from fastapi.middleware.cors import CORSMiddleware
 import pandas as pd
 import os
 from email.message import EmailMessage
@@ -11,6 +12,15 @@ from io import BytesIO
 from dotenv import load_dotenv
 
 app = FastAPI()
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # O usa tu frontend URL exacta por seguridad
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
 load_dotenv()
 
 # Directorio para guardar los PDF generados
